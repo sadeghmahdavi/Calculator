@@ -4,7 +4,7 @@ import "./App.css";
 function applyOperation(operand1, operator, operand2) {
   switch (operator) {
     case "+":
-      return opsserand1 + operand2;
+      return operand1 + operand2;
     case "-":
       return operand1 - operand2;
     case "*":
@@ -32,7 +32,7 @@ export default class App extends Component {
   addNumbersToVector = (operation) => {
     let newNumber = this.state.result;
     let operationsCount = this.state.operationsCount;
-    if (this.state.numbers.length == 0) {
+    if (this.state.numbers.length === 0) {
       this.setState((prevState) => {
         const numbers = [newNumber, operation];
         return { numbers, result: "", operationsCount: operationsCount++ };
